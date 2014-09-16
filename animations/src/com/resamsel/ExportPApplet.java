@@ -9,58 +9,67 @@ import processing.core.PApplet;
  * @author $ Author:resamsel $
  * @version $ Date:10.09.2014 $
  */
-public abstract class ExportPApplet extends PApplet {
-	private static final long serialVersionUID = 1666118877568163656L;
+public abstract class ExportPApplet extends PApplet
+{
+   private static final long serialVersionUID = 1666118877568163656L;
 
-	private boolean export = false;
+   private boolean export = false;
 
-	/**
-	 * 
-	 * @see processing.core.PApplet#draw()
-	 */
-	@Override
-	public void draw() {
-		export();
-	}
-	
-	public void keyPressed() {
-		if (key == 'x')
-			if (!export)
-				startExport();
-			else
-				stopExport();
-	}
+   protected int proportion = 3;
 
-	private void export() {
-		if (!export)
-			return;
+   /**
+    * 
+    * @see processing.core.PApplet#draw()
+    */
+   @Override
+   public void draw()
+   {
+      export();
+   }
 
-		if (frameCount >= getMaxFrameCount())
-			stopExport();
-		if (frameCount % 3 == 0 && frameCount < getMaxFrameCount())
-			saveFrame("image-####.png");
-	}
+   public void keyPressed()
+   {
+      if(key == 'e')
+         if(!export)
+            startExport();
+         else
+            stopExport();
+   }
 
-	private void startExport() {
-		export = true;
-		frameCount = 0;
-		resetAdvance();
-		smooth(8);
-	}
+   private void export()
+   {
+      if(!export)
+         return;
 
-	private void stopExport() {
-		export = false;
-		smooth(2);
-	}
+      if(frameCount >= getMaxFrameCount())
+         stopExport();
+      if(frameCount % proportion == 0 && frameCount < getMaxFrameCount())
+         saveFrame(String.format("%s-####.png", getClass().getSimpleName().toLowerCase()));
+   }
 
-	protected abstract float getMaxFrameCount();
+   private void startExport()
+   {
+      export = true;
+      frameCount = 0;
+      resetAdvance();
+      smooth(8);
+   }
 
-	protected abstract void resetAdvance();
+   private void stopExport()
+   {
+      export = false;
+      smooth(2);
+   }
 
-	/**
-	 * @return the export
-	 */
-	protected boolean isExport() {
-		return export;
-	}
+   protected abstract int getMaxFrameCount();
+
+   protected abstract void resetAdvance();
+
+   /**
+    * @return the export
+    */
+   protected boolean isExport()
+   {
+      return export;
+   }
 }

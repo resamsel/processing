@@ -135,8 +135,8 @@ public class StarRotation extends InteractiveExportPApplet {
 	 * @see com.resamsel.ExportPApplet#getMaxFrameCount()
 	 */
 	@Override
-	protected float getMaxFrameCount() {
-		return maxAngle / angleAdvance;
+	protected int getMaxFrameCount() {
+		return (int) (maxAngle / angleAdvance);
 	}
 
 	/**

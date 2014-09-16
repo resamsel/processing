@@ -100,8 +100,8 @@ public class BlueDots extends InteractiveExportPApplet {
 	}
 
 	@Override
-	protected float getMaxFrameCount() {
-		return halfDiagonal / waveAdvance;
+	protected int getMaxFrameCount() {
+		return (int) (halfDiagonal / waveAdvance);
 	}
 
 	@Override

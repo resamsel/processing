@@ -97,7 +97,7 @@ public class Triangle extends InteractiveExportPApplet {
 	 */
 	@Override
 	protected void advance() {
-		angle = (angle + rotation) % 360;
+		angle = (angle + rotation) % getMaxFrameCount();
 	}
 
 	/**
@@ -119,7 +119,7 @@ public class Triangle extends InteractiveExportPApplet {
 	 * @see com.resamsel.ExportPApplet#getMaxFrameCount()
 	 */
 	@Override
-	protected float getMaxFrameCount() {
+	protected int getMaxFrameCount() {
 		return 360;
 	}
 

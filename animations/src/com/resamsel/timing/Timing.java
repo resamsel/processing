@@ -107,7 +107,7 @@ public class Timing extends InteractiveExportPApplet {
 	 * @see com.resamsel.ExportPApplet#getMaxFrameCount()
 	 */
 	@Override
-	protected float getMaxFrameCount() {
+	protected int getMaxFrameCount() {
 		return 100;
 	}
 
