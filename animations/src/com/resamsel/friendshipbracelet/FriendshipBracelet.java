@@ -56,38 +56,49 @@ public class FriendshipBracelet extends InteractiveExportPApplet
 
       proportion = 2;
 
-      c01 = Knot.build(this, color(127, 59, 8));
-      c02 = Knot.build(this, color(179, 88, 6));
-      c03 = Knot.build(this, color(224, 130, 20));
-      c04 = Knot.build(this, color(253, 184, 99));
-      c05 = Knot.build(this, color(254, 224, 182));
-      c06 = Knot.build(this, color(247, 247, 247));
-      c07 = Knot.build(this, color(216, 218, 235));
-      c08 = Knot.build(this, color(178, 171, 210));
-      c09 = Knot.build(this, color(128, 115, 172));
-      c10 = Knot.build(this, color(84, 39, 136));
-      c11 = Knot.build(this, color(45, 0, 75));
-      c12 = Knot.build(this, color(35, 0, 60));
+      c01 = Knot.build(this, color(166, 206, 227));
+      c02 = Knot.build(this, color(31, 120, 180));
+      c03 = Knot.build(this, color(178, 223, 138));
+      c04 = Knot.build(this, color(51, 160, 44));
+      c05 = Knot.build(this, color(251, 154, 153));
+      c06 = Knot.build(this, color(227, 26, 28));
+      c07 = Knot.build(this, color(253, 191, 111));
+      c08 = Knot.build(this, color(255, 127, 0));
+      c09 = Knot.build(this, color(202, 178, 214));
+      c10 = Knot.build(this, color(106, 61, 154));
+      c11 = Knot.build(this, color(255, 255, 153));
+      c12 = Knot.build(this, color(177, 89, 40));
 
       // @formatter:off
 		// standard
-		// -------- upper row ---------/----- lower row -----
-		add(c02, c04, c06, c08, c10, c12, c02, c04, c06, c08, c10);
-		add(c01, c02, c04, c06, c08, c10, c01, c02, c04, c06, c08);
-		add(c03, c01, c02, c04, c06, c08, c03, c01, c02, c04, c06);
-		add(c05, c03, c01, c02, c04, c06, c05, c03, c01, c02, c04);
-		add(c07, c05, c03, c01, c02, c04, c07, c05, c03, c01, c02);
-		add(c09, c07, c05, c03, c01, c02, c09, c07, c05, c03, c01);
-		add(c11, c09, c07, c05, c03, c01, c11, c09, c07, c05, c03);
-		add(c12, c11, c09, c07, c05, c03, c12, c11, c09, c07, c05);
-		add(c10, c12, c11, c09, c07, c05, c10, c12, c11, c09, c07);
-		add(c08, c10, c12, c11, c09, c07, c08, c10, c12, c11, c09);
-		add(c06, c08, c10, c12, c11, c09, c06, c08, c10, c12, c11);
-		add(c04, c06, c08, c10, c12, c11, c04, c06, c08, c10, c12);
+		add(c02, c04, c06, c08, c10, c12,
+		       c02, c04, c06, c08, c10);
+		add(c01, c02, c04, c06, c08, c10,
+		       c01, c02, c04, c06, c08);
+		add(c03, c01, c02, c04, c06, c08,
+		       c03, c01, c02, c04, c06);
+		add(c05, c03, c01, c02, c04, c06,
+		       c05, c03, c01, c02, c04);
+		add(c07, c05, c03, c01, c02, c04,
+		       c07, c05, c03, c01, c02);
+		add(c09, c07, c05, c03, c01, c02,
+		       c09, c07, c05, c03, c01);
+		add(c11, c09, c07, c05, c03, c01,
+		       c11, c09, c07, c05, c03);
+		add(c12, c11, c09, c07, c05, c03,
+		       c12, c11, c09, c07, c05);
+		add(c10, c12, c11, c09, c07, c05,
+		       c10, c12, c11, c09, c07);
+		add(c08, c10, c12, c11, c09, c07,
+		       c08, c10, c12, c11, c09);
+		add(c06, c08, c10, c12, c11, c09,
+		       c06, c08, c10, c12, c11);
+		add(c04, c06, c08, c10, c12, c11,
+		       c04, c06, c08, c10, c12);
 
 		// small zig zag
-		// -------- upper row ---------/----- lower row -----
-		add(c02, c04, c06, c08, c10, c12, c02, c04, c06, c08, c10);
+		add(c02, c04, c06, c08, c10, c12,
+		       c02, c04, c06, c08, c10);
 
 		// zig zag
 		add(c02, c04, c06, c08, c10, c12,
@@ -112,7 +123,6 @@ public class FriendshipBracelet extends InteractiveExportPApplet
 		       c02, c04, c06, c08, c10);
 
 		// squares
-		// -------- upper row ---------/----- lower row -----
       add(c02, c04, c06, c06, c04, c02,
              c04, c06, c01, c06, c04);
       add(c02, c06, c01, c01, c06, c02,
@@ -141,8 +151,8 @@ public class FriendshipBracelet extends InteractiveExportPApplet
              c05, c04, c06, c04, c05);
 
 		// small zig zag (again)
-		// -------- upper row ---------/----- lower row -----
-		add(c02, c04, c06, c08, c10, c12, c02, c04, c06, c08, c10);
+		add(c02, c04, c06, c08, c10, c12,
+		       c02, c04, c06, c08, c10);
 		// @formatter:on
 
       knots = (pattern.get(0).size() + 1) / 2;
